@@ -1,28 +1,46 @@
 import React from 'react';
 import { Button } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import { Home, PersonRounded, BookRounded } from '@material-ui/icons';
+
+const useStyles = makeStyles(theme => ({
+  margin: {
+    margin: theme.spacing(1),
+  },
+}));
 
 export default function Navigation() {
+  const classes = useStyles();
+
   return (
     <>
       <Button
-        // component={homepage ? AnchorLink : Link}
-        offset="64"
-        href="#aboutme"
-        to="/#aboutme"
+        className={classes.margin}
+        variant="outlined"
         color="inherit"
+        size="large"
+        startIcon={<Home />}
+      >
+        Home
+      </Button>
+      <Button
+        className={classes.margin}
+        variant="outlined"
+        color="inherit"
+        size="large"
+        startIcon={<PersonRounded />}
       >
         About me
       </Button>
       <Button
-        // component={homepage ? AnchorLink : Link}
-        offset="64"
-        href="#portfolio"
-        to="/#portfolio"
+        className={classes.margin}
+        variant="outlined"
         color="inherit"
+        size="large"
+        startIcon={<BookRounded />}
       >
         Portfolio
       </Button>
-      <Button color="inherit">Impossible List</Button>
     </>
   );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
-import { Home, RecentActors } from '@material-ui/icons';
+import { Home, PersonRounded, BookRounded } from '@material-ui/icons';
 
 export default function MobileNavigation({ onCloseDrawer }) {
   return (
@@ -27,9 +27,22 @@ export default function MobileNavigation({ onCloseDrawer }) {
       > */}
       <ListItem button>
         <ListItemIcon>
-          <RecentActors />
+          <PersonRounded />
         </ListItemIcon>
-        <ListItemText primary="Contacts" />
+        <ListItemText primary="About me" />
+      </ListItem>
+      {/* </NavLink> */}
+      {/* <NavLink
+        to={routes.contacts}
+        className="Navlink"
+        activeClassName="Navlink-active"
+        onClick={onCloseDrawer}
+      > */}
+      <ListItem button>
+        <ListItemIcon>
+          <BookRounded />
+        </ListItemIcon>
+        <ListItemText primary="Portfolio" />
       </ListItem>
       {/* </NavLink> */}
     </List>

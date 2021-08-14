@@ -27,13 +27,11 @@ const useStyles = makeStyles(theme => {
       backgroundColor: 'transparent',
       boxShadow: 'none',
     },
-    title: {
-      flexGrow: 1,
-      color: theme.palette.primary.contrastText,
-      textDecoration: 'none',
-    },
     date: {
       flexGrow: 1,
+    },
+    '@media screen and (min-width: 530px)': {
+      date: { fontSize: '1.3rem' },
     },
   };
 });
@@ -49,7 +47,7 @@ export default function Header() {
     setAnchorEl(null);
   };
 
-  const isTabletOrMobile = useMediaQuery({ maxWidth: 767 });
+  const isTabletOrMobile = useMediaQuery({ maxWidth: 959 });
 
   return (
     <AppBar
