@@ -27,11 +27,8 @@ export default function Background({ children }) {
   }, [vantaEffect]);
 
   const styles = {
-    // position: 'fixed',
-    // top: 0,
-    // left: 0,
-    // width: '100vw',
     minHeight: '100vh',
+    backgroundColor: '#1f4063',
   };
 
   return (
