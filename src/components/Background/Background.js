@@ -26,14 +26,15 @@ export default function Background({ children }) {
     };
   }, [vantaEffect]);
 
-  const styles = {
-    minHeight: '100vh',
-    backgroundColor: '#1f4063',
-  };
-
   return (
-    <div ref={myRef} style={styles}>
-      <div>{children}</div>
+    <div
+      ref={myRef}
+      style={{
+        minHeight: '100vh',
+        backgroundColor: '#1f4063',
+      }}
+    >
+      {children}
     </div>
   );
 }

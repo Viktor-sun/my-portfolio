@@ -1,6 +1,5 @@
 import React, { lazy, Suspense } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Background from './components/Background';
 import Header from './components/Header';
 import routes from './routes';
 
@@ -20,7 +19,7 @@ const PortfolioPage = lazy(() =>
 
 export default function App() {
   return (
-    <Background>
+    <div>
       <Header />
       <Suspense fallback={<div>download...</div>}>
         <Switch>
@@ -48,6 +47,6 @@ export default function App() {
         fugit cupiditate quisquam voluptas ipsam ut in, quis deserunt
         reprehenderit soluta facilis nesciunt corrupti. Ea, reprehenderit!
       </span> */}
-    </Background>
+    </div>
   );
 }
