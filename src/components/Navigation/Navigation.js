@@ -6,8 +6,10 @@ import { Home, PersonRounded, BookRounded } from '@material-ui/icons';
 import routes from '../../routes';
 
 const useStyles = makeStyles(theme => ({
-  margin: {
+  button: {
     margin: theme.spacing(1),
+    fontFamily: "'Caveat', sans-serif",
+    fontSize: '1.2rem',
   },
 }));
 
@@ -17,7 +19,7 @@ export default function Navigation() {
   return (
     <>
       <Button
-        className={classes.margin}
+        className={classes.button}
         variant="outlined"
         color="inherit"
         size="large"
@@ -28,7 +30,7 @@ export default function Navigation() {
         Home
       </Button>
       <Button
-        className={classes.margin}
+        className={classes.button}
         variant="outlined"
         color="inherit"
         size="large"
@@ -39,7 +41,7 @@ export default function Navigation() {
         About me
       </Button>
       <Button
-        className={classes.margin}
+        className={classes.button}
         variant="outlined"
         color="inherit"
         size="large"

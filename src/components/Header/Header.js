@@ -29,9 +29,11 @@ const useStyles = makeStyles(theme => {
     },
     date: {
       flexGrow: 1,
+      fontFamily: "'Caveat', sans-serif",
+      fontSize: '1.2rem',
     },
     '@media screen and (min-width: 530px)': {
-      date: { fontSize: '1.3rem' },
+      date: { fontSize: '2rem' },
     },
   };
 });

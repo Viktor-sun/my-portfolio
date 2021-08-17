@@ -1,8 +1,4 @@
 .section {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -10,13 +6,43 @@
   z-index: 2;
 }
 
+.photo {
+  display: block;
+  margin: auto;
+  width: 100px;
+  border-radius: 50%;
+}
+
 .title {
+  margin-top: 30px;
+  margin-bottom: 10px;
   text-align: center;
-  font-size: 50px;
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: 'Caveat', sans-serif;
+}
+
+.subTitle {
+  margin-bottom: 32px;
+  font-size: 1.7rem;
+  text-align: center;
+  font-family: 'Caveat', sans-serif;
 }
 
 .socialsNetwork {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
+
+.icon {
+  width: 30px;
+  height: 30px;
+  transition: transform 250ms ease;
+}
+
+/* .icon:hover {
+  transform: scale(1.5);
+} */
