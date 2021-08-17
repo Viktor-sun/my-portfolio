@@ -54,7 +54,6 @@ export default function HomePage() {
                 href="https://www.linkedin.com/in/viktor-tsolka/"
                 target="_blank"
                 rel="noopener noreferrer"
-                color="inherit"
               >
                 <LinkedIn className={styles.icon} />
               </IconButton>
@@ -72,7 +71,6 @@ export default function HomePage() {
                 href="https://github.com/Viktor-sun"
                 target="_blank"
                 rel="noopener noreferrer"
-                color="inherit"
               >
                 <GitHub className={styles.icon} />
               </IconButton>
@@ -90,7 +88,6 @@ export default function HomePage() {
                 href="mailto:viktortsolka4@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                color="inherit"
               >
                 <Email className={styles.icon} />
               </IconButton>
@@ -108,7 +105,6 @@ export default function HomePage() {
                 href="https://www.instagram.com/viteecheck/"
                 target="_blank"
                 rel="noopener noreferrer"
-                color="inherit"
               >
                 <Instagram className={styles.icon} />
               </IconButton>
@@ -126,7 +122,6 @@ export default function HomePage() {
                 href="https://t.me/viktor_tsk"
                 target="_blank"
                 rel="noopener noreferrer"
-                color="inherit"
               >
                 <Telegram className={styles.icon} />
               </IconButton>
