@@ -1,9 +1,16 @@
 import React from 'react';
 import { IconButton, Tooltip, Typography } from '@material-ui/core';
-import { LinkedIn, GitHub, Email, Instagram } from '@material-ui/icons';
+import {
+  LinkedIn,
+  GitHub,
+  Email,
+  Instagram,
+  Telegram,
+} from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
 import styles from './HomePage.module.css';
 import Background from '../../components/Background';
+import photo from '../../assets/images/photo.png';
 
 const useStylesBootstrap = makeStyles(theme => ({
   arrow: {
@@ -24,8 +31,8 @@ export default function HomePage() {
       <section className={styles.section}>
         <img
           className={styles.photo}
-          src="https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIwfHx8ZW58MHx8fHw%3D&w=1000&q=80"
-          alt=""
+          src={photo}
+          alt="my portrait"
           width="250"
         />
         <Typography variant="h1" className={styles.title}>
@@ -37,7 +44,7 @@ export default function HomePage() {
         <ul className={styles.socialsNetwork}>
           <li>
             <Tooltip
-              title="linkedin"
+              title="LinkedIn"
               interactive
               enterTouchDelay={0}
               arrow
@@ -55,14 +62,14 @@ export default function HomePage() {
           </li>
           <li>
             <Tooltip
-              title="linkedin"
+              title="GitHub"
               interactive
               enterTouchDelay={0}
               arrow
               classes={classes}
             >
               <IconButton
-                href="https://www.linkedin.com/in/viktor-tsolka/"
+                href="https://github.com/Viktor-sun"
                 target="_blank"
                 rel="noopener noreferrer"
                 color="inherit"
@@ -73,14 +80,14 @@ export default function HomePage() {
           </li>
           <li>
             <Tooltip
-              title="linkedin"
+              title="viktortsolka4@gmail.com"
               interactive
               enterTouchDelay={0}
               arrow
               classes={classes}
             >
               <IconButton
-                href="https://www.linkedin.com/in/viktor-tsolka/"
+                href="mailto:viktortsolka4@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 color="inherit"
@@ -91,14 +98,14 @@ export default function HomePage() {
           </li>
           <li>
             <Tooltip
-              title="linkedin"
+              title="Instagram"
               interactive
               enterTouchDelay={0}
               arrow
               classes={classes}
             >
               <IconButton
-                href="https://www.linkedin.com/in/viktor-tsolka/"
+                href="https://www.instagram.com/viteecheck/"
                 target="_blank"
                 rel="noopener noreferrer"
                 color="inherit"
@@ -107,7 +114,24 @@ export default function HomePage() {
               </IconButton>
             </Tooltip>
           </li>
-          <li></li>
+          <li>
+            <Tooltip
+              title="Telegram"
+              interactive
+              enterTouchDelay={0}
+              arrow
+              classes={classes}
+            >
+              <IconButton
+                href="https://t.me/viktor_tsk"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="inherit"
+              >
+                <Telegram className={styles.icon} />
+              </IconButton>
+            </Tooltip>
+          </li>
         </ul>
       </section>
     </Background>

@@ -9,12 +9,10 @@
 .photo {
   display: block;
   margin: auto;
-  width: 100px;
-  border-radius: 50%;
 }
 
 .title {
-  margin-top: 30px;
+  margin-top: 0;
   margin-bottom: 10px;
   text-align: center;
   font-size: 4rem;
@@ -23,7 +21,7 @@
 }
 
 .subTitle {
-  margin-bottom: 32px;
+  margin-bottom: 0;
   font-size: 1.7rem;
   text-align: center;
   font-family: 'Caveat', sans-serif;
@@ -40,9 +38,4 @@
 .icon {
   width: 30px;
   height: 30px;
-  transition: transform 250ms ease;
 }
-
-/* .icon:hover {
-  transform: scale(1.5);
-} */
