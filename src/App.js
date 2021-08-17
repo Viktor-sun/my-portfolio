@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import routes from './routes';
 
 const HomePage = lazy(() =>
@@ -19,7 +20,7 @@ const PortfolioPage = lazy(() =>
 
 export default function App() {
   return (
-    <div>
+    <div style={{ position: 'relative' }}>
       <Header />
       <Suspense fallback={<div>download...</div>}>
         <Switch>
@@ -34,6 +35,7 @@ export default function App() {
           </Route>
         </Switch>
       </Suspense>
+      <Footer />
       {/* <span style={{ fontSize: '60px' }}>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero tempora
         repellat repudiandae, reprehenderit cupiditate, id explicabo corrupti
