@@ -1,8 +1,10 @@
 import React from 'react';
-import { Typography } from '@material-ui/core';
+import { Typography, Button } from '@material-ui/core';
+import GetAppIcon from '@material-ui/icons/GetApp';
 import Background from '../../components/Background';
 import styles from './AboutPage.module.css';
 import photo from '../../assets/images/photo2.jpg';
+import cv from '../../assets/pdf/Tsolka_Viktor_FS25.pdf';
 
 export default function AboutPage() {
   return (
@@ -28,6 +30,18 @@ export default function AboutPage() {
             pixels, you can find me on the street while cycling or near the
             tennis table.
           </p>
+
+          <Button
+            className={styles.button}
+            variant="contained"
+            color="secondary"
+            href={cv}
+            target="_blank"
+            rel="noopener noreferrer"
+            startIcon={<GetAppIcon />}
+          >
+            download CV
+          </Button>
         </div>
       </section>
       <Background height="70px" />
