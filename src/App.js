@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Spinner from './components/Spinner';
 import routes from './routes';
 
 const HomePage = lazy(() =>
@@ -22,7 +23,7 @@ export default function App() {
   return (
     <div style={{ position: 'relative' }}>
       <Header />
-      <Suspense fallback={<div>download...</div>}>
+      <Suspense fallback={<Spinner />}>
         <Switch>
           <Route path={routes.home} exact>
             <HomePage />
