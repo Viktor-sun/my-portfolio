@@ -8,7 +8,7 @@ export default function Spinner() {
       type="Watch"
       color="#c13c4c"
       secondaryColor="green"
-      timeout="250ms"
+      timeout={250}
       height={100}
       width={100}
       style={{
