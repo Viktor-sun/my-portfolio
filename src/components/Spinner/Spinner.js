@@ -6,7 +6,7 @@ export default function Spinner() {
   return (
     <Loader
       type="Watch"
-      color="#c13c4c"
+      color="#f50057"
       secondaryColor="green"
       timeout={250}
       height={100}
