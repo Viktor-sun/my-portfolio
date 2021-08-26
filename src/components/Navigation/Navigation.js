@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { Home, PersonRounded, BookRounded } from '@material-ui/icons';
+import { Home, PersonRounded, BookRounded, Contacts } from '@material-ui/icons';
 import routes from '../../routes';
 
 const useStyles = makeStyles(theme => ({
@@ -50,6 +50,17 @@ export default function Navigation() {
         to={routes.portfolio}
       >
         Portfolio
+      </Button>
+      <Button
+        className={classes.button}
+        variant="outlined"
+        color="inherit"
+        size="large"
+        startIcon={<Contacts />}
+        component={Link}
+        to={routes.contacts}
+      >
+        Contacts
       </Button>
     </>
   );
