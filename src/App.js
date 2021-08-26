@@ -19,6 +19,12 @@ const PortfolioPage = lazy(() =>
   ),
 );
 
+const ContactsPage = lazy(() =>
+  import(
+    './pages/ContactsPage/ContactsPage.js' /* webpackChunkName: "contacts-page" */
+  ),
+);
+
 export default function App() {
   return (
     <div style={{ position: 'relative' }}>
@@ -33,6 +39,9 @@ export default function App() {
           </Route>
           <Route path={routes.portfolio} exact>
             <PortfolioPage />
+          </Route>
+          <Route path={routes.contacts} exact>
+            <ContactsPage />
           </Route>
         </Switch>
       </Suspense>
