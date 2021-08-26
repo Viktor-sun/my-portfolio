@@ -8,7 +8,6 @@ import {
   makeStyles,
   useScrollTrigger,
   IconButton,
-  Container,
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import { format } from 'date-fns';
@@ -59,29 +58,27 @@ export default function Header() {
         [classes.rootSplash]: !trigger,
       })}
     >
-      <Container fixed>
-        <Toolbar>
-          <Typography className={classes.date}>
-            Today is the {format(new Date(), 'do MMMM Y')}
-          </Typography>
+      <Toolbar>
+        <Typography className={classes.date}>
+          Today is the {format(new Date(), 'do MMMM Y')}
+        </Typography>
 
-          {isTabletOrMobile ? (
-            <IconButton
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              onClick={handleClick}
-            >
-              <MenuIcon />
-            </IconButton>
-          ) : (
-            <Navigation />
-          )}
-        </Toolbar>
-        <Drawer anchor="right" open={Boolean(anchorEl)} onClose={handleClose}>
-          <MobileNavigation onCloseDrawer={handleClose} />
-        </Drawer>
-      </Container>
+        {isTabletOrMobile ? (
+          <IconButton
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            onClick={handleClick}
+          >
+            <MenuIcon />
+          </IconButton>
+        ) : (
+          <Navigation />
+        )}
+      </Toolbar>
+      <Drawer anchor="right" open={Boolean(anchorEl)} onClose={handleClose}>
+        <MobileNavigation onCloseDrawer={handleClose} />
+      </Drawer>
     </AppBar>
   );
 }
