@@ -1,0 +1,20 @@
+.container {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 40px 10px;
+  border-radius: 20px;
+  background-color: green;
+}
+
+@media screen and (min-width: 350px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 60px 65px;
+  }
+}
