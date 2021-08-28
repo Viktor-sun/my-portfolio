@@ -1,7 +1,8 @@
 import React from 'react';
-import { Typography, Button } from '@material-ui/core';
+import Button from '@material-ui/core/Button';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import Background from '../../components/Background';
+import SectionTitle from '../../components/SectionTitle';
 import styles from './AboutPage.module.css';
 import photo from '../../assets/images/photo2.jpg';
 import cv from '../../assets/pdf/Tsolka_Viktor_FS25.pdf';
@@ -10,9 +11,7 @@ export default function AboutPage() {
   return (
     <>
       <Background height="300px">
-        <Typography variant="h1" className={styles.title}>
-          Some About Me
-        </Typography>
+        <SectionTitle title="Some About Me" />
       </Background>
       <section className={styles.section}>
         <img src={photo} alt="my portrait" className={styles.img} />
