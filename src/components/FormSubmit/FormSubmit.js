@@ -2,7 +2,12 @@ import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import InputMask from 'react-input-mask';
-import { TextField, InputAdornment } from '@material-ui/core';
+import {
+  TextField,
+  InputAdornment,
+  Typography,
+  Button,
+} from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import { Email, EmojiEmotions, Phone, Message } from '@material-ui/icons';
 import styles from './FormSubmit.module.css';
@@ -12,7 +17,6 @@ const CssTextField = withStyles({
   root: {
     marginBottom: '40px',
     '& .MuiInputBase-input': {
-      //   color: '#fff', // Text color
       fontFamily: 'Caveat, sans-serif',
       fontSize: '1.7rem',
       lineHeight: '1.5',
@@ -22,15 +26,15 @@ const CssTextField = withStyles({
       fontSize: '2rem',
     },
     '& label.Mui-focused': {
-      color: '#24cca7',
+      color: '#1f4063',
       fontFamily: 'Caveat, sans-serif',
     },
     '& .MuiInput-underline:after': {
-      borderBottomColor: '#24cca7',
+      borderBottomColor: '#1f4063',
     },
-    '& .MuiInput-underline:before': {
-      borderBottomColor: '#bdbdbd',
-    },
+    // '& .MuiInput-underline:before': {
+    //   borderBottomColor: '#bdbdbd',
+    // },
     '& .MuiInput-underline.Mui-error:after': {
       borderBottomColor: 'red',
     },
@@ -66,6 +70,9 @@ export default function FormSubmit() {
 
   return (
     <div className={styles.container}>
+      <Typography variant="h3" className={styles.title}>
+        Simple way to contac me
+      </Typography>
       <form onSubmit={formik.handleSubmit} className={styles.form}>
         <CssTextField
           fullWidth
@@ -80,7 +87,7 @@ export default function FormSubmit() {
               </InputAdornment>
             ),
           }}
-          placeholder="Enter your email"
+          placeholder="your email"
           value={formik.values.email}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
@@ -100,7 +107,7 @@ export default function FormSubmit() {
               </InputAdornment>
             ),
           }}
-          placeholder="Enter your name"
+          placeholder="your name"
           value={formik.values.name}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
@@ -135,7 +142,7 @@ export default function FormSubmit() {
                   </InputAdornment>
                 ),
               }}
-              placeholder="Enter your number"
+              placeholder="your number"
             />
           )}
         </InputMask>
@@ -153,15 +160,21 @@ export default function FormSubmit() {
               </InputAdornment>
             ),
           }}
-          placeholder="Enter your message"
+          placeholder="enter your message"
           value={formik.values.message}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           error={formik.touched.message && Boolean(formik.errors.message)}
           helperText={formik.touched.message && formik.errors.message}
         />
-
-        <button type="submit">Send</button>
+        <Button
+          color="secondary"
+          variant="contained"
+          type="submit"
+          className={styles.button}
+        >
+          Send
+        </Button>
       </form>
     </div>
   );

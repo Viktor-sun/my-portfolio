@@ -1,0 +1,32 @@
+.address {
+  text-align: center;
+}
+
+@media screen and (max-width: 1279px) {
+  .address {
+    margin-bottom: 30px;
+  }
+}
+
+.title {
+  font-family: 'Caveat', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.text {
+  margin: 0;
+
+  font-size: 2rem;
+  font-family: 'Caveat', sans-serif;
+  text-decoration: none;
+}
+
+.text:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.text > a {
+  text-decoration: none;
+  color: inherit;
+}

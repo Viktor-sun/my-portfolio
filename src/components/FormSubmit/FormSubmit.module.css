@@ -1,9 +1,8 @@
 .container {
   max-width: 540px;
-  margin: 0 auto;
   padding: 40px 10px;
+  border: 2px solid #1f4063;
   border-radius: 20px;
-  background-color: green;
 }
 
 @media screen and (min-width: 350px) {
@@ -13,8 +12,29 @@
   }
 }
 
+@media screen and (max-width: 1279px) {
+  .container {
+    margin: 0 auto 30px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .container {
-    padding: 60px 65px;
+    padding: 50px 65px;
   }
+}
+
+.title {
+  margin-bottom: 30px;
+  font-family: 'Caveat', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.button {
+  display: block;
+  margin: 0 auto;
+  max-width: 170px;
+  font-family: 'Caveat', sans-serif;
+  font-size: 1.2rem;
 }
