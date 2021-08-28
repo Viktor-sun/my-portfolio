@@ -52,7 +52,7 @@ export default function Footer() {
           align="center"
           className={classes.typography}
         >
-          Made by Viktor Tsolka
+          Development by Viktor Tsolka
         </Typography>
         <Copyright />
       </Container>
