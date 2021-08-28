@@ -1,9 +1,10 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import InputMask from 'react-input-mask';
 import { TextField, InputAdornment } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
-import { Email, EmojiEmotions, Message } from '@material-ui/icons';
+import { Email, EmojiEmotions, Phone, Message } from '@material-ui/icons';
 import styles from './FormSubmit.module.css';
 import formSubmit from '../../helpers/formSubmit';
 
@@ -45,6 +46,7 @@ export default function FormSubmit() {
     initialValues: {
       email: '',
       name: '',
+      phoneNumber: '',
       message: '',
     },
     validationSchema: Yup.object({
@@ -53,10 +55,11 @@ export default function FormSubmit() {
         .min(2, 'Too Short!')
         .max(50, 'Too Long!')
         .required('Required'),
+      phoneNumber: Yup.string().optional(),
       message: Yup.string().max(150, 'Maximum 150 characters').optional(),
     }),
-    onSubmit: ({ email, name, message }) => {
-      formSubmit({ email, name, message });
+    onSubmit: ({ email, name, message, phoneNumber }) => {
+      formSubmit({ email, name, message, phoneNumber });
       formik.resetForm();
     },
   });
@@ -105,6 +108,38 @@ export default function FormSubmit() {
           helperText={formik.touched.name && formik.errors.name}
         />
 
+        <InputMask
+          mask="+38 (999) 999-99-99"
+          value={formik.values.phoneNumber}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          error={
+            formik.touched.phoneNumber && Boolean(formik.errors.phoneNumber)
+          }
+          helperText={formik.touched.phoneNumber && formik.errors.phoneNumber}
+          disabled={false}
+          maskChar=" "
+        >
+          {props => (
+            <CssTextField
+              {...props}
+              fullWidth
+              id="phoneNumber"
+              name="phoneNumber"
+              type="tel"
+              label="Phone Number"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <Phone className={styles.form__icon} />
+                  </InputAdornment>
+                ),
+              }}
+              placeholder="Enter your number"
+            />
+          )}
+        </InputMask>
+
         <CssTextField
           fullWidth
           id="message"
@@ -125,6 +160,7 @@ export default function FormSubmit() {
           error={formik.touched.message && Boolean(formik.errors.message)}
           helperText={formik.touched.message && formik.errors.message}
         />
+
         <button type="submit">Send</button>
       </form>
     </div>
