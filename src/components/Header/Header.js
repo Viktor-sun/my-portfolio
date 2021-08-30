@@ -48,11 +48,10 @@ export default function Header() {
     setAnchorEl(null);
   };
 
-  const isTabletOrMobile = useMediaQuery({ maxWidth: 959 });
+  const isTabletOrMobile = useMediaQuery({ maxWidth: 1169 });
 
   return (
     <AppBar
-      position="fixed"
       className={classnames({
         [classes.root]: true,
         [classes.rootSplash]: !trigger,
