@@ -18,7 +18,17 @@
 
 .timeLine {
   font-family: 'Caveat', sans-serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
+}
+
+@media screen and (min-width: 370px) {
+  .timeLine {
+    font-size: 3rem;
+  }
+}
+
+.timeLine:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .list {
@@ -31,6 +41,7 @@
 @media screen and (min-width: 400px) {
   .list {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -39,18 +50,15 @@
   padding: 5px 10px;
   background-color: #909090;
   border-radius: 40%;
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
+  margin: 10px;
 }
 
 @media screen and (min-width: 430px) {
   .item {
     padding: 5px 15px;
   }
-}
-
-.item:not(:last-child) {
-  margin-right: 20px;
 }
 
 .img {
