@@ -1,6 +1,6 @@
 # Victor's Personal Website
 
-![Website Screenshot](src/assets/images/photo2.jpg)
+<!-- ![Website Screenshot](src/assets/images/photo2.jpg) -->
 
 You can find a live version at
 [vs-portfolio.netlify.app](https://vs-portfolio.netlify.app).
