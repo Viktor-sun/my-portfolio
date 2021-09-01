@@ -1,6 +1,6 @@
 # Victor's Personal Website
 
-<!-- ![Website Screenshot](src/assets/images/photo2.jpg) -->
+![Website Screenshot](https://res.cloudinary.com/dgc5kdhwi/image/upload/v1630495173/portfolio%20screen%20/Victors_Portfolio_-_Google_Chrome_kfxwtn.jpg)
 
 You can find a live version at
 [vs-portfolio.netlify.app](https://vs-portfolio.netlify.app).
