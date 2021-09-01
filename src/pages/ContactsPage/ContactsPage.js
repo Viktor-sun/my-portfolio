@@ -11,7 +11,7 @@ export default function ContactsPage() {
   return (
     <>
       <Helmet>
-        <title>Contacts | Viktor</title>
+        <title>Contacts | Victor's Portfolio</title>
         <meta property="og:description" content="Hey, my contacts for you." />
         <meta
           property="og:url"

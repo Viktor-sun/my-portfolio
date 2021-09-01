@@ -12,7 +12,7 @@ export default function AboutPage() {
   return (
     <>
       <Helmet>
-        <title>About | Viktor</title>
+        <title>About | Victor's Portfolio</title>
         <meta property="og:description" content="Hey, some about me!" />
         <meta
           property="og:url"

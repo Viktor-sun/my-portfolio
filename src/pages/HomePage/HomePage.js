@@ -10,7 +10,7 @@ export default function HomePage() {
   return (
     <Background>
       <Helmet>
-        <title>Home | Viktor</title>
+        <title>Home | Victor's Portfolio</title>
         <meta
           property="og:description"
           content="Hey, I'm Viktor from Ukraine. I love programming, ride a bike and learning new things!"

@@ -28,7 +28,7 @@ export default function PortfolioPage() {
   return (
     <div className={s.page}>
       <Helmet>
-        <title>Portfolio | Viktor</title>
+        <title>Portfolio | Victor's Portfolio</title>
         <meta
           property="og:description"
           content="If you want, you can see me portfolio."
