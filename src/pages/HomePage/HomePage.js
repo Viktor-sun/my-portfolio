@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { IconButton, Tooltip, Typography } from '@material-ui/core';
 import {
   LinkedIn,
@@ -28,6 +29,14 @@ export default function HomePage() {
 
   return (
     <Background>
+      <Helmet>
+        <title>Home | Viktor</title>
+        <meta
+          property="og:description"
+          content="Hey, I'm Viktor from Ukraine. I love programming, ride a bike and learning new things!"
+        />
+        <meta property="og:url" content="https://vs-portfolio.netlify.app" />
+      </Helmet>
       <section className={styles.section}>
         <img
           className={styles.photo}

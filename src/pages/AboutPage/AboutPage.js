@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import Button from '@material-ui/core/Button';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import Background from '../../components/Background';
@@ -10,6 +11,14 @@ import cv from '../../assets/pdf/Tsolka_Viktor_FS25.pdf';
 export default function AboutPage() {
   return (
     <>
+      <Helmet>
+        <title>About | Viktor</title>
+        <meta property="og:description" content="Hey, some about me!" />
+        <meta
+          property="og:url"
+          content="https://vs-portfolio.netlify.app/about"
+        />
+      </Helmet>
       <Background height="300px">
         <SectionTitle title="Some About Me" />
       </Background>

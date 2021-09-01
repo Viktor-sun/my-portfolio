@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -26,6 +27,17 @@ import ownScreen3 from '../../assets/images/projects/own-project3.jpg';
 export default function PortfolioPage() {
   return (
     <div className={s.page}>
+      <Helmet>
+        <title>Portfolio | Viktor</title>
+        <meta
+          property="og:description"
+          content="If you want, you can see me portfolio."
+        />
+        <meta
+          property="og:url"
+          content="https://vs-portfolio.netlify.app/portfolio"
+        />
+      </Helmet>
       <Background height="300px">
         <SectionTitle title="Portfolio" />
       </Background>
