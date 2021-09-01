@@ -14,6 +14,7 @@ import { format } from 'date-fns';
 import { useMediaQuery } from 'react-responsive';
 import Navigation from '../Navigation';
 import MobileNavigation from '../MobileNavigation';
+import Logo from '../Logo';
 
 const useStyles = makeStyles(theme => {
   return {
@@ -58,6 +59,7 @@ export default function Header() {
       })}
     >
       <Toolbar>
+        <Logo />
         <Typography className={classes.date}>
           Today is the {format(new Date(), 'do MMMM Y')}
         </Typography>
